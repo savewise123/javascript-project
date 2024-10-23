@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="movie-card">
+        <div class="movie-info">
+
+      function createModal(movie)
+
+        const movieModal = document.createElement("div");
+        movieModal.className = "movie-modal"; 
+      
+        movieModal.innerHTML = `
+            <span class="close"><i class="fa-regular fa-circle-xmark"></i></span>
+            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />
+            <h3>${movie.title}</h3>
+            <p>${movie.overview}</p>
+            <p>개봉일 : ${movie.release_date}</p>
+            <p>평점 : ${movie.vote_average}/10</p>
+            <button id="addBookmark" class="modalBookmark">북마크 추가</button>
+            <button id="removeBookmark" class="modalBookmark">북마크 삭제</button>
+        `;  
+      
+        const modalContainer = document.getElementById("modal-content");
+        if (modalContainer) {
+          modalContainer.innerHTML = ""; 
+          modalContainer.appendChild(movieModal); 
+          modalContainer.style.display = "block"; 
+          console.log("모달이 modal-content에 추가됨");
+        } else {
+          console.error("modal-content 요소를 찾을 수 없습니다.");
+        }
+        movieModal.style.display = "block";
+    </div>
+     
+</body>
+</html>

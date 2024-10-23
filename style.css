@@ -1,0 +1,48 @@
+
+
+header{
+
+display: flex;
+flex-direction:  column;
+justify-content: center;
+align-items: center;
+color: white;
+width: 100%;
+height: 250px;
+
+}
+
+header img{
+width : 180px
+height : 100px
+margin : 30px 0 20px
+
+}
+
+
+
+
+.movie card{
+
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 56px;
+
+}
+
+.movie-modal{
+padding: 20px;
+border-radius: 10px;
+width: 80%;
+max-width: 700px;
+text-alighn : left
+overflow-y: auto;
+margin :auto;
+
+
+}
